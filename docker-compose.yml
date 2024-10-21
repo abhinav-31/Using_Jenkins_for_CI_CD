@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  react-app:
+    build:
+      context: ./frontend  # Path to the React app directory
+      dockerfile: Dockerfile  # Use the Dockerfile inside the react-app directory
+    container_name: react-container
+    ports:
+      - "3000:3000"  # Port mapping for React app
+    networks:
+      - app-network
+    depends_on:
+      - spring-boot-app  # Ensure React starts after Spring Boot is up
+
+  spring-boot-app:
+    build:
+      context: ./backend_spring/Tifiin_Delivery_And_Management_System/  # Path to the Spring Boot app directory
+      dockerfile: Dockerfile  # Use the Dockerfile inside the spring-boot-app directory
+    container_name: spring-container
+    ports:
+      - "8081:8081"  # Port mapping for Spring Boot app
+    extra_hosts:
+      - "host.docker.gateway:host-gateway"  # Equivalent to --add-host
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge  # Bridge network for container communication
+
