@@ -1,0 +1,101 @@
+/* DbHomePage.css */
+
+/* Main container styling */
+.db-homepage-container {
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.db-homepage-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.db-homepage-header h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+/* Content layout */
+.db-homepage-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Order card styling */
+.db-homepage-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.db-homepage-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Order details in table format */
+.db-homepage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.db-homepage-table th,
+.db-homepage-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.db-homepage-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.db-homepage-table td {
+  color: #555;
+}
+
+.status-delivered {
+  color: green;
+  font-weight: bold;
+}
+
+/* No orders message */
+.no-orders {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .db-homepage-container {
+    padding: 20px;
+  }
+
+  .db-homepage-header h2 {
+    font-size: 1.5em;
+  }
+
+  .db-homepage-card {
+    padding: 15px;
+  }
+
+  .db-homepage-table th,
+  .db-homepage-table td {
+    padding: 8px 10px;
+  }
+}

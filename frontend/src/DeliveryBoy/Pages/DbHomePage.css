@@ -1,0 +1,101 @@
+/* DbHomePage.css */
+
+/* Main container styling */
+.db-homepage-container {
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.db-homepage-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Content layout */
+.db-homepage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order card styling */
+.db-homepage-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.db-homepage-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.db-homepage-card p {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.db-homepage-card strong {
+  color: #000;
+}
+
+/* Status styling */
+.status-placed {
+  color: orange;
+  font-weight: bold;
+}
+
+/* No orders message */
+.no-orders {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+}
+
+/* Button styling */
+.mark-delivered-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mark-delivered-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .db-homepage-container {
+    padding: 20px;
+  }
+
+  .db-homepage-container h2 {
+    font-size: 1.5em;
+  }
+
+  .db-homepage-card {
+    padding: 15px;
+  }
+
+  .db-homepage-card p {
+    font-size: 0.9em;
+  }
+}
