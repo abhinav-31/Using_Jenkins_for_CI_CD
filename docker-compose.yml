@@ -8,10 +8,10 @@ services:
     container_name: react-container
     ports:
       - "3000:3000"  # Port mapping for React app
-    networks:
-      - app-network
-    depends_on:
-      - spring-boot-app  # Ensure React starts after Spring Boot is up
+    # networks:
+    #   - app-network
+    # depends_on:
+    #   - spring-boot-app  # Ensure React starts after Spring Boot is up
 
   spring-boot-app:
     build:
@@ -22,12 +22,13 @@ services:
       - "8081:8081"  # Port mapping for Spring Boot app
     env_file:
       - ./db-config.env
-    extra_hosts:
-      - "host.docker.gateway:host-gateway"  # Equivalent to --add-host
-    networks:
-      - app-network
+    # extra_hosts:
+    #   - "host.docker.gateway:host-gateway"  # Equivalent to --add-host
+    # networks:
+    #   - my_overlay_network
+    network_mode: "host"  # Use the host's network
 
-networks:
-  app-network:
-    driver: bridge  # Bridge network for container communication
+# networks:
+#   app-network:
+#     driver: overlay  # Bridge network for container communication
 
