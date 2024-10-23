@@ -6,8 +6,8 @@ pipeline {
             steps {
                 // Checkout code using GitHub credentials
                 git branch: 'main', 
-                    url: 'https://github.com/abhinav-31/Using_Jenkins_for_CI_CD.git',
-                    credentialsId: 'add8e79a-4225-4160-91b6-b9b6e31bc73a' // Use the ID of the credentials added in Jenkins
+                    url: 'git@github.com:abhinav-31/Using_Jenkins_for_CI_CD.git'
+                    // credentialsId: 'add8e79a-4225-4160-91b6-b9b6e31bc73a' // Use the ID of the credentials added in Jenkins
             }
         }
 

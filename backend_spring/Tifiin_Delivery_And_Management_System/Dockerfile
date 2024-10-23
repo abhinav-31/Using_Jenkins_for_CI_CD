@@ -29,7 +29,7 @@ WORKDIR /app
 
 # Copy the JAR file from the 'build' stage
 COPY --from=build /app/target/Tifiin_Delivery_And_Management_System-0.0.1-SNAPSHOT.jar /app/Tifiin_Delivery_And_Management_System-0.0.1-SNAPSHOT.jar
-
+COPY . .
 # Expose the application port
 EXPOSE 8081
 
